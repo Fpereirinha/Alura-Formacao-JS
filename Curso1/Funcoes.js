@@ -1,5 +1,5 @@
 function soma(x,y,z = 0) {
-    if (z == 0){
+    if (z === 0){
         return x + y
     } else{
         return x * y
