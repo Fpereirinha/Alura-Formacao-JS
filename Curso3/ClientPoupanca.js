@@ -30,5 +30,5 @@ ClientP.prototype.DepositarPoup = function(value){
 }
 console.log(Pedro)
 Pedro.DepositarPoup(200)
-Pedro.depositar(200)
+Pedro.depositar(100)
 console.log(Pedro)
