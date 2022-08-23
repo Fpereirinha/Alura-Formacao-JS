@@ -4,7 +4,7 @@ const client = {
     email: 'pedrofpereira222@gmail.com',
     dependentes : [{nome : 'Jonas',idade : 26, parentesco : 'Primo'}, {nome: 'Pedro', idade: 55, parentesco: 'Irmão'}],
     saldo : 0,
-    depositar : function (x){this.saldo += x },
+    depositar : function (x = 0){this.saldo += x },
 }
 
 console.log(client.saldo)
