@@ -1,32 +1,32 @@
-class Cliente{
-    constructor(nome, email, cpf, saldo){
+class Cliente {
+    constructor(nome, email, cpf, saldo) {
         this.nome = nome
         this.email = email
         this.cpf = cpf
         this.saldo = saldo
     }
-    depositar(value){
-        if (value > 0) {this.saldo += value};
+    depositar(value) {
+        if (value > 0) { this.saldo += value };
     }
-    saque(value){
-        if (value < this.saldo) {this.saldo -= value}
+    saque(value) {
+        if (value < this.saldo) { this.saldo -= value }
     }
-    exibeSaldo(){console.log(this.saldo)}
+    exibeSaldo() { console.log(this.saldo) }
 }
 
 
 
 
-class ClienteP extends Cliente{
-    constructor(nome, email, cpf, saldo, saldop){
+class ClienteP extends Cliente {
+    constructor(nome, email, cpf, saldo, saldop) {
         super(nome, email, cpf, saldo)
         this.saldopoup = saldop
     }
-    depositarP(value){
-        if (value > 0) {this.saldopoup += value}
+    depositarP(value) {
+        if (value > 0) { this.saldopoup += value }
     }
-    passaMes() {this.saldopoup *= 1.1}
-    exibeSaldoP(){console.log(this.saldopoup)}
+    passaMes() { this.saldopoup *= 1.1 }
+    exibeSaldoP() { console.log(this.saldopoup) }
 
 }
 
