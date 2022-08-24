@@ -6,7 +6,7 @@ class Cliente {
         this.saldo = saldo
     }
     depositar(value) {
-        if (value > 0) { this.saldo += value };
+        if (value > 0) { this.saldo += value }
     }
     saque(value) {
         if (value < this.saldo) { this.saldo -= value }
@@ -17,7 +17,7 @@ class Cliente {
 
 
 
-class ClienteP extends Cliente {
+class ClientP extends Cliente{
     constructor(nome, email, cpf, saldo, saldop) {
         super(nome, email, cpf, saldo)
         this.saldopoup = saldop
@@ -30,7 +30,7 @@ class ClienteP extends Cliente {
 
 }
 
-const Pedro = new ClienteP('Pedro', 'pedrofpereira222@gmail.com', '65465456', 0, 2542)
+const Pedro = new ClientP('Pedro', 'pedrofpereira222@gmail.com', '65465456', 0, 2542)
 Pedro.depositar(100)
 Pedro.depositarP(2000)
 Pedro.exibeSaldoP()
@@ -43,3 +43,6 @@ console.log('------')
 console.log(Object.values(Pedro))
 console.log('------')
 console.log(Object.entries(Pedro))
+console.log(Pedro.cpf)
+Pedro.saque(22)
+Pedro.exibeSaldo()
