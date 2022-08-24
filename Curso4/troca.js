@@ -1,4 +1,3 @@
-
 function troca(lista, analise) {
     let itemAnalise = lista[analise];
     let itemAnterior = lista[analise - 1];
