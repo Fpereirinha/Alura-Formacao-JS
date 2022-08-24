@@ -67,3 +67,4 @@ function juntaListas(lista1, lista2) {
 
 x = juntaListas(edFolha, edGalho)
 console.log(x)
+module.exports = juntaListas()
