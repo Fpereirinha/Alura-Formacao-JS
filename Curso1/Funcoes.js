@@ -13,8 +13,8 @@ function primo(x){
         if (x % index === 0){
             return false
         }
-    return true
     }
+    return true
 }
 
 soma1 = soma(5,5);
@@ -22,3 +22,4 @@ console.log(soma1);
 console.log(soma(5,5,1));
 console.log(formated_text('Pedro'))
 console.log(primo(7))
+console.log(primo(15))
