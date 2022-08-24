@@ -10,7 +10,7 @@ for (let i = 0; i < lista.length; i++) {
 }
 console.log(lista_ordenada)
 console.log(lista)
-
+// organizar, repetindo//
 let tamanho = lista.length
 for (let i = 0; i < tamanho; i++) {
     let menor = lista[0]
