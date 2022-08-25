@@ -18,5 +18,4 @@ function buscaBinaria(array, de, ate, value){
     }
 }
 
-
 console.log(buscaBinaria(listaLivros, 0, listaLivros.length-1, 32))
