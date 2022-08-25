@@ -6,7 +6,7 @@ class Cliente {
         this.saldo = saldo
     }
     depositar(value) {
-        if (value > 0) { this.saldo += value };
+        if (value > 0) { this.saldo += value }
     }
     saque(value) {
         if (value < this.saldo) { this.saldo -= value }
