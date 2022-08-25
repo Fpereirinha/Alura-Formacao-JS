@@ -28,3 +28,5 @@ function dividePivo(array){
 }
 
 console.log(dividePivo(listaLivros))
+
+module.exports = trocaLugar;
