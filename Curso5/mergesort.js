@@ -1,7 +1,6 @@
 const listaLivros = require('./listaLivros')
 
-function mergeSort(lista,){
-    console.log(lista)
+function mergeSort(lista){
     if(lista.length > 1){
         const meio = Math.floor(lista.length / 2);
         const parte1 = mergeSort(lista.slice(0, meio));
