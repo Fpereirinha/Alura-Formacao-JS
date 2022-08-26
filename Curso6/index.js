@@ -8,7 +8,7 @@ const errad = (erro) => {
         if (err){
             errad(err)
         }
-        console.log(chalk.green(text))
+            console.log(chalk.green(text))
     })
 }*/
 /*const pegaArquivo = (caminho) => {
@@ -19,12 +19,20 @@ const errad = (erro) => {
 async function pegaArq(x){
     try{
         const value = await fs.promises.readFile(x, "utf-8")
-        console.log(chalk.cyanBright(value))
+        console.log(Pegalink(value))
     } catch (x){errad(x)}
     finally {console.log(chalk.blue('Finalizado.'))
     }
 }
 
+const Pegalink = (x) => {
+    const resultados = []
+    const regex = /\[([^\]]*)\]\(([^\)]*)\)/gm;
+    let temp;
+    while ((temp = regex.exec(x)) !== null){
+        resultados.push({[temp[1]] : temp[2]})
+    }
+    return resultados
+}
 
 pegaArq('links.md')
-
