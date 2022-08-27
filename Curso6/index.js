@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import fs from 'fs';
 const errad = (erro) => {
-    throw new Error(chalk.red(erro.code, 'arquivo não encontrado.'))
+    throw new Error(chalk.red(erro, 'arquivo não encontrado.'))
 }
 /*const pegaArquivo = (caminho) =>{
     fs.readFile(caminho, "utf-8", (err, text) => {
@@ -19,10 +19,8 @@ const errad = (erro) => {
 async function pegaArq(x){
     try{
         const value = await fs.promises.readFile(x, "utf-8")
-        console.log(Pegalink(value))
-    } catch (x){errad(x)}
-    finally {console.log(chalk.blue('Finalizado.'))
-    }
+        return Pegalink(value)
+    } catch (erro){errad(erro)}
 }
 
 const Pegalink = (x) => {
@@ -32,7 +30,7 @@ const Pegalink = (x) => {
     while ((temp = regex.exec(x)) !== null){
         resultados.push({[temp[1]] : temp[2]})
     }
-    return resultados
+    return resultados.length === 0 ? 'não há links' : resultados
 }
 
-pegaArq('links.md')
+export {pegaArq}
