@@ -1,7 +1,7 @@
-import chalk from "chalk";
+// import chalk from "chalk";
 import fs from 'fs';
 const errad = (erro) => {
-    throw new Error(chalk.red(erro, 'arquivo não encontrado.'))
+    throw new Error(erro)
 }
 /*const pegaArquivo = (caminho) =>{
     fs.readFile(caminho, "utf-8", (err, text) => {
